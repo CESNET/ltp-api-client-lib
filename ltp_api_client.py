@@ -110,7 +110,7 @@ def get(ctx, id):
 @click.option('--limit', '-l', type=int, default=10, help='Limit for fetched data')
 @click.pass_context
 def list_(ctx, limit=None):
-    resp = ctx.obj['archive'].list()
+    resp = ctx.obj['archive'].list(limit)
     pprint.pprint(resp.data)
 
 
